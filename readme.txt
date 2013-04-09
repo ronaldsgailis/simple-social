@@ -3,7 +3,9 @@ Contributors: ronaldsg
 Tags: social, share, buttons
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 0.1
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Adds social share buttons to posts without loading remote javascript libraries.
 
