@@ -183,7 +183,7 @@ class SimpleSocial {
 	    }
 	    $button_html .= '</ul>';
 
-	return $content.$button_html;
+		return $content.$button_html;
 
 	}
 }
