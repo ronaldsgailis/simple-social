@@ -1,1 +1,0 @@
-This is a Github Pages site for Simple Social WordPress plugin.
