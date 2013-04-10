@@ -1,3 +1,4 @@
 permalink: /:title.html
 exclude: sass
 auto: true
+baseurl: /simple-social
