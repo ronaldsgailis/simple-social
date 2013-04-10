@@ -1,0 +1,5 @@
+url: ronaldsgailis.github.com/simple-social
+markdown: rdiscount
+permalink: date
+exclude: sass
+auto: true
