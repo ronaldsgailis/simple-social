@@ -1,5 +1,5 @@
 url: http://ronaldsgailis.github.io/simple-social
 markdown: rdiscount
-permalink: date
+permalink: /:title.html
 exclude: sass
 auto: true
