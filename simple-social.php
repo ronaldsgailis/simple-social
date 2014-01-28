@@ -146,39 +146,38 @@ class SimpleSocial {
 	    $the_url =  urlencode(get_permalink());
 	    $title = urlencode(get_the_title());
 	    $fb_app_id = get_option('simple-social-fb_app_id');
-		$fb_url = "https://www.facebook.com/dialog/feed?app_id=".$fb_app_id;
+		$fb_url = "https://www.facebook.com/dialog/feed?app_id=" . $fb_app_id;
 		$site_url = site_url();
 		$redirect_url = get_permalink();//site_url('thank-you');
-    	$fb_url .= "&link=".$site_url;
+    	$fb_url .= "&link=" . $site_url;
 
     	if(has_post_thumbnail()) {
     		$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
-    		$fb_url .= "&picture=".urlencode($image[0]);
+    		$fb_url .= "&picture=" . urlencode($image[0]);
     	}
 
-		$fb_url .= "&name=".$title;
-		$fb_url .= "&redirect_uri=".$redirect_url;
-		$fb_url .= "&description=".$post->post_excerpt;
+		$fb_url .= "&name=" . $title;
+		$fb_url .= "&redirect_uri=" . $redirect_url;
+		$fb_url .= "&description=" . $post->post_excerpt;
 
-		$twitter_url = 'https://twitter.com/intent/tweet?url='.$the_url.'&text='.$title;
+		$twitter_url = 'https://twitter.com/intent/tweet?url=' . $the_url . '&text=' . $title;
 		$twitter_name = get_option('simple-social-twitter_name');
 		
 		//if twitter name is not set in plugin options, then skip adding via to tweet
 		if(!$twitter_name) {
-			$twitter_url .= '&via='.$twitter_name;
+			$twitter_url .= '&via=' . $twitter_name;
 		}
 
-		$twitter_name = get_option('simple-social-twitter_name');
 	    $button_html = 
 	    '<ul class="social clearfix">
 	        <li>
-	        	<a href="'.$twitter_url.'" class="twitter" target="_blank" rel="nofollow">'.__('Tweet').'</a>
+	        	<a href="' . $twitter_url . '" class="twitter" target="_blank" rel="nofollow">' . __('Tweet') . '</a>
 	        </li>';
 
 	    if($fb_app_id) {
 	    	$button_html .=
 	        '<li>
-		        <a href="'.$fb_url.'" class="facebook" target="_blank" rel="nofollow">'.__('Share').'</a>
+		        <a href="' . $fb_url . '" class="facebook" target="_blank" rel="nofollow">' . __('Share') . '</a>
 	        </li>';
 	    }
 	    $button_html .= '</ul>';
@@ -189,4 +188,3 @@ class SimpleSocial {
 }
 
 $simple_social = new SimpleSocial();
-?>
